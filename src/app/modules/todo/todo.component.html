@@ -1,7 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    {{title}}
+    Selected: {{selectedTodo.name}}
   </h1>
+  <ul>
+    <li *ngFor="let todo of todos" (click)="onSelect(todo)">
+      {{ todo.id }}
+      {{ todo.name }}
+    </li>
+  </ul>
 </div>
 

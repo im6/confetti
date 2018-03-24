@@ -44,4 +44,5 @@ Thumbs.db
 
 
 .idea/
-src/app/*.js.map
+src/app/**/*.js.map
+src/app/**/*.js

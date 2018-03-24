@@ -1,0 +1,10 @@
+ul {
+    width: 110px;
+    display: inline-block;
+}
+ul > li {
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 2em;
+    color: #4399f5;
+}
