@@ -8,10 +8,12 @@ import { HelloComponent } from './modules/hello/hello.component';
 import { TodoComponent } from './modules/todo/todo.component';
 import { TodoDetailComponent } from './modules/todo/todoDetail/todoDetail.component';
 
+import { TodoService } from './service/todo.service';
+
 const appRoutes: Routes = [
   {
     path: '',
-    redirectTo: '/hello',
+    redirectTo: '/todo',
     pathMatch: 'full',
   },
   {
@@ -39,7 +41,9 @@ const appRoutes: Routes = [
     TodoComponent,
     TodoDetailComponent,
   ],
-  providers: [],
+  providers: [
+    TodoService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

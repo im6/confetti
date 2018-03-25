@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Todo } from '../../models/todo';
-import { myData } from './mock';
+import { TodoService } from '../../service/todo.service';
 
 @Component({
   templateUrl: './todo.component.html',
@@ -8,14 +8,22 @@ import { myData } from './mock';
 })
 
 export class TodoComponent implements OnInit {
-  todos = myData;
+  todos = [];
   selectedTodo: Todo = {
     id: 0,
     name: null
   };
+  constructor(private todoService: TodoService) {
+    // should do nothing
+  }
+  ngOnInit() {
+    //this.todos = this.todoService.getTodoListDummy()
+    this.todoService.getTodoList()
+      .subscribe(todos => {
+        this.todos = todos;
+      });
+  }
 
-  constructor() { }
-  ngOnInit() { }
   onSelect(oneTodo: Todo): void {
     this.selectedTodo = oneTodo;
   }
