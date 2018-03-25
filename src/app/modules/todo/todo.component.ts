@@ -11,7 +11,7 @@ export class TodoComponent implements OnInit {
   todos = myData;
   selectedTodo: Todo = {
     id: 0,
-    name: 'not selected'
+    name: null
   };
 
   constructor() { }
