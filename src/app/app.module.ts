@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './modules/app/app.component';
 import { HelloComponent } from './modules/hello/hello.component';
 import { TodoComponent } from './modules/todo/todo.component';
+import { TodoDetailComponent } from './modules/todo/todoDetail/todoDetail.component';
 
 const appRoutes: Routes = [
   {
@@ -36,6 +37,7 @@ const appRoutes: Routes = [
     AppComponent,
     HelloComponent,
     TodoComponent,
+    TodoDetailComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
