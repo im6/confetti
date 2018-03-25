@@ -14,4 +14,7 @@ export class TodoService {
   getTodoList(): Observable<Todo[]> {
     return of(todoData);
   }
+  getTodoDetail(id: number): Observable<Todo> {
+    return of(todoData.find(todo => todo.id === id));
+  }
 }

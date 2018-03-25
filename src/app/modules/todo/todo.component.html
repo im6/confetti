@@ -11,8 +11,8 @@
     >
       {{ todo.id }}
       {{ todo.name }}
+      <a routerLink="/todo/{{todo.id}}">View</a>
     </li>
   </ul>
 
-  <todo-detail [todo]="selectedTodo"></todo-detail>
 </div>
