@@ -14,7 +14,6 @@ export class ColorsComponent {
   ngOnInit() {
     this.colorService.getList()
       .subscribe(data => {
-        debugger;
         this.colors = data;
       });
   }
