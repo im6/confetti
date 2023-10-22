@@ -1,0 +1,17 @@
+{
+  "name": "template-typescript-package",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/im6/template-typescript-package.git",
+  "author": "im6",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack build --config ./webpack.config.js"
+  },
+  "dependencies": {
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
